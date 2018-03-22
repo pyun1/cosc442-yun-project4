@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>RecipeFactoryTest.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">edu.towson.cis.cosc442.project4.coffeemaker (Mar 22, 2018 5:34:48 PM)</a> &gt; <a href="../../index.html" class="el_group">CoffeeMaker</a> &gt; <a href="../index.html" class="el_bundle">src</a> &gt; <a href="index.source.html" class="el_package">edu.towson.cis.cosc442.project4.coffeemaker</a> &gt; <span class="el_source">RecipeFactoryTest.java</span></div><h1>RecipeFactoryTest.java</h1><pre class="source lang-java linenums">package edu.towson.cis.cosc442.project4.coffeemaker;
+
+import org.junit.*;
+import static org.junit.Assert.*;
+
+/**
+ * The class &lt;code&gt;RecipeFactoryTest&lt;/code&gt; contains tests for the class &lt;code&gt;{@link RecipeFactory}&lt;/code&gt;.
+ *
+ * @generatedBy CodePro at 3/21/18 9:07 PM
+ * @author Paul Yun
+ * @version $Revision: 1.0 $
+ */
+<span class="fc" id="L13">public class RecipeFactoryTest {</span>
+	/**
+	 * Run the Recipe createRecipe() method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/21/18 9:07 PM
+	 */
+	@Test
+	public void testCreateRecipe_1()
+		throws Exception {
+
+<span class="fc" id="L25">		Recipe result = RecipeFactory.createRecipe();</span>
+
+		// add additional test code here
+<span class="fc" id="L28">		assertNotNull(result);</span>
+<span class="fc" id="L29">		assertEquals(null, result.toString());</span>
+<span class="fc" id="L30">		assertEquals(null, result.getName());</span>
+<span class="fc" id="L31">		assertEquals(0, result.getAmtSugar());</span>
+<span class="fc" id="L32">		assertEquals(0, result.getAmtMilk());</span>
+<span class="fc" id="L33">		assertEquals(0, result.getAmtCoffee());</span>
+<span class="fc" id="L34">		assertEquals(0, result.getPrice());</span>
+<span class="fc" id="L35">		assertEquals(0, result.getAmtChocolate());</span>
+<span class="fc" id="L36">	}</span>
+
+	/**
+	 * Run the Recipe createRecipe2() method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/21/18 9:07 PM
+	 */
+	@Test
+	public void testCreateRecipe2_1()
+		throws Exception {
+
+<span class="fc" id="L49">		Recipe result = RecipeFactory.createRecipe2();</span>
+
+		// add additional test code here
+<span class="fc" id="L52">		assertNotNull(result);</span>
+<span class="fc" id="L53">		assertEquals(null, result.toString());</span>
+<span class="fc" id="L54">		assertEquals(null, result.getName());</span>
+<span class="fc" id="L55">		assertEquals(0, result.getAmtSugar());</span>
+<span class="fc" id="L56">		assertEquals(0, result.getAmtMilk());</span>
+<span class="fc" id="L57">		assertEquals(0, result.getAmtCoffee());</span>
+<span class="fc" id="L58">		assertEquals(0, result.getPrice());</span>
+<span class="fc" id="L59">		assertEquals(0, result.getAmtChocolate());</span>
+<span class="fc" id="L60">	}</span>
+
+	/**
+	 * Run the Recipe createRecipe3() method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/21/18 9:07 PM
+	 */
+	@Test
+	public void testCreateRecipe3_1()
+		throws Exception {
+
+<span class="fc" id="L73">		Recipe result = RecipeFactory.createRecipe3();</span>
+
+		// add additional test code here
+<span class="fc" id="L76">		assertNotNull(result);</span>
+<span class="fc" id="L77">		assertEquals(null, result.toString());</span>
+<span class="fc" id="L78">		assertEquals(null, result.getName());</span>
+<span class="fc" id="L79">		assertEquals(0, result.getAmtSugar());</span>
+<span class="fc" id="L80">		assertEquals(0, result.getAmtMilk());</span>
+<span class="fc" id="L81">		assertEquals(0, result.getAmtCoffee());</span>
+<span class="fc" id="L82">		assertEquals(0, result.getPrice());</span>
+<span class="fc" id="L83">		assertEquals(0, result.getAmtChocolate());</span>
+<span class="fc" id="L84">	}</span>
+
+	/**
+	 * Perform pre-test initialization.
+	 *
+	 * @throws Exception
+	 *         if the initialization fails for some reason
+	 *
+	 * @generatedBy CodePro at 3/21/18 9:07 PM
+	 */
+	@Before
+	public void setUp()
+		throws Exception {
+		// add additional set up code here
+<span class="fc" id="L98">	}</span>
+
+	/**
+	 * Perform post-test clean-up.
+	 *
+	 * @throws Exception
+	 *         if the clean-up fails for some reason
+	 *
+	 * @generatedBy CodePro at 3/21/18 9:07 PM
+	 */
+	@After
+	public void tearDown()
+		throws Exception {
+		// Add additional tear down code here
+<span class="fc" id="L112">	}</span>
+
+	/**
+	 * Launch the test.
+	 *
+	 * @param args the command line arguments
+	 *
+	 * @generatedBy CodePro at 3/21/18 9:07 PM
+	 */
+	public static void main(String[] args) {
+<span class="nc" id="L122">		new org.junit.runner.JUnitCore().run(RecipeFactoryTest.class);</span>
+<span class="nc" id="L123">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span>edu.towson.cis.cosc442.project4.coffeemaker (Mar 22, 2018 5:34:48 PM)</div></body></html>
