@@ -18,6 +18,9 @@ public class RecipeTest {
 	 *
 	 * @generatedBy CodePro at 3/21/18 9:07 PM
 	 */
+	Recipe fix = new Recipe();
+	
+	
 	@Test
 	public void testEquals_1()
 		throws Exception {
@@ -202,6 +205,7 @@ public class RecipeTest {
 		fixture.setAmtChocolate(amtChocolate);
 
 		// add additional test code here
+		assertEquals(0,fixture.getAmtChocolate(),0.0001);
 	}
 
 	/**
@@ -240,6 +244,7 @@ public class RecipeTest {
 		fixture.setAmtCoffee(amtCoffee);
 
 		// add additional test code here
+		assertEquals(0, fixture.getAmtCoffee(),0.0001);
 	}
 
 	/**
@@ -278,6 +283,7 @@ public class RecipeTest {
 		fixture.setAmtMilk(amtMilk);
 
 		// add additional test code here
+		assertEquals(0,fixture.getAmtMilk(),0.0001);
 	}
 
 	/**
@@ -316,6 +322,7 @@ public class RecipeTest {
 		fixture.setAmtSugar(amtSugar);
 
 		// add additional test code here
+		assertEquals(0,fixture.getAmtSugar(),0.0001);
 	}
 
 	/**
@@ -328,13 +335,13 @@ public class RecipeTest {
 	@Test
 	public void testSetAmtSugar_2()
 		throws Exception {
-		Recipe fixture = new Recipe();
-		fixture.setName("");
-		int amtSugar = 1;
-
-		fixture.setAmtSugar(amtSugar);
+		fix.setName("");
+		int amtSugar = 0;
+		
+		fix.setAmtSugar(amtSugar);
 
 		// add additional test code here
+		assertEquals(amtSugar, fix.getAmtSugar());
 	}
 
 	/**
@@ -368,11 +375,14 @@ public class RecipeTest {
 		throws Exception {
 		Recipe fixture = new Recipe();
 		fixture.setName("");
-		int price = -1;
+		fixture.setPrice(1);
+		
+		int price = 0;
 
 		fixture.setPrice(price);
 
 		// add additional test code here
+		assertEquals(price, fixture.getPrice(),0.0001);
 	}
 
 	/**
@@ -392,6 +402,27 @@ public class RecipeTest {
 		fixture.setPrice(price);
 
 		// add additional test code here
+		assertEquals(price, fixture.getPrice(),0.0001);
+	}
+
+	/**
+	 * Run the void setPrice(int) method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/21/18 9:07 PM
+	 */
+	@Test
+	public void testSetPrice_3()
+		throws Exception {
+		Recipe fixture = new Recipe();
+		fixture.setName("");
+		int price = 1;
+
+		fixture.setPrice(price);
+
+		// add additional test code here
+		assertEquals(price, fixture.getPrice(),0.0001);
 	}
 
 	/**
@@ -425,6 +456,7 @@ public class RecipeTest {
 	public void setUp()
 		throws Exception {
 		// add additional set up code here
+		fix.setPrice(5);
 	}
 
 	/**

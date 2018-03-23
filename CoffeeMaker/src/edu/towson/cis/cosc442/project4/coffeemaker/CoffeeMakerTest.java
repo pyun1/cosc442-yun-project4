@@ -56,15 +56,15 @@ public class CoffeeMakerTest {
 	public void testAddInventory_1()
 		throws Exception {
 		CoffeeMaker fixture = new CoffeeMaker();
-		int amtCoffee = 1;
-		int amtMilk = 1;
+		int amtCoffee = 0;
+		int amtMilk = 0;
 		int amtSugar = 0;
-		int amtChocolate = -1;
+		int amtChocolate = 0;
 
 		boolean result = fixture.addInventory(amtCoffee, amtMilk, amtSugar, amtChocolate);
 
 		// add additional test code here
-		assertEquals(false, result);
+		assertEquals(true, result);
 	}
 
 	/**
@@ -146,13 +146,13 @@ public class CoffeeMakerTest {
 		CoffeeMaker fixture = new CoffeeMaker();
 		int amtCoffee = 1;
 		int amtMilk = 1;
-		int amtSugar = 1;
-		int amtChocolate = 1;
-
+		int amtSugar = 0;
+		int amtChocolate = 0;
+		
 		boolean result = fixture.addInventory(amtCoffee, amtMilk, amtSugar, amtChocolate);
 
 		// add additional test code here
-		assertEquals(false, result);
+		assertEquals(true, result);
 	}
 
 	/**
@@ -167,11 +167,13 @@ public class CoffeeMakerTest {
 		throws Exception {
 		CoffeeMaker fixture = new CoffeeMaker();
 		Recipe r = new Recipe();
+		r.setName("Test");
+		fixture.addRecipe(r);
 
 		boolean result = fixture.addRecipe(r);
 
 		// add additional test code here
-		assertEquals(true, result);
+		assertEquals(false, result);
 	}
 
 	/**
@@ -378,7 +380,7 @@ public class CoffeeMakerTest {
 		assertEquals(0, result.getPrice());
 		assertEquals(0, result.getAmtSugar());
 	}
-
+	
 	/**
 	 * Run the Recipe getRecipeForName(String) method test.
 	 *
@@ -455,6 +457,13 @@ public class CoffeeMakerTest {
 		assertEquals(0, result.getAmtCoffee());
 		assertEquals(0, result.getPrice());
 		assertEquals(0, result.getAmtSugar());
+		
+		name = "Test";
+		Recipe r = new Recipe();
+		r.setName(name);
+		fixture.addRecipe(r);
+		result = fixture.getRecipeForName(name);
+		assertEquals(r,result);
 	}
 
 	/**
@@ -540,12 +549,13 @@ public class CoffeeMakerTest {
 		throws Exception {
 		CoffeeMaker fixture = new CoffeeMaker();
 		Recipe r = new Recipe();
+		r.setPrice(1);
 		int amtPaid = 1;
 
 		int result = fixture.makeCoffee(r, amtPaid);
 
 		// add additional test code here
-		assertEquals(1, result);
+		assertEquals(0, result);
 	}
 
 	/**
